@@ -2,3 +2,19 @@ h1 {
   font-weight: lighter;
   font-style: italic;
 }
+.header-dark {
+  background-color: black;
+  color: white;
+}
+
+.nav-dark {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-dark a {
+  color: white;
+  &:hover {
+    color: rgb(62, 154, 216);
+  }
+}
