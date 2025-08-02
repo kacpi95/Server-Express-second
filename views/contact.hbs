@@ -1,8 +1,11 @@
 <h2>Contact</h2>
 <form method='POST' action='/contact/send-message'>
+
+  <div>{{#if isSent}} Your content{{/if}}</div>
+  <div>{{#if isError}} Something is valid! {{/if}}</div>
   <label>Name: <input type='text' name='author' /></label>
   <label>Email: <input type='email' name='sender' /></label>
-  <label>Title: <input type='name' name='title' /></label>
+  <label>Title: <input type='text' name='title' /></label>
   <label>Message: <textarea name='message'></textarea></label>
   <button type='submit'>Send message</button>
 </form>
