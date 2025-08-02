@@ -14,9 +14,9 @@ app.use(express.static(path.join(__dirname, './public')));
 app.use(express.urlencoded({ extended: false }));
 
 app.post('/contact/send-message', (req, res) => {
-  const { author, sender, title, message } = req.body;
+  const { author, sender, title, message, img } = req.body;
 
-  if (author && sender && title && message) {
+  if ((author && sender && title && message, img)) {
     res.render('contact', { isSent: true });
   } else {
     res.render('contact', { isError: true });

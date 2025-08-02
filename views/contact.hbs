@@ -1,12 +1,18 @@
 <h2>Contact</h2>
 <form method='POST' action='/contact/send-message'>
   {{#if isSent}}
-    <div class='isSent'> Your content</div>{{/if}}
+    <div class='isSent'> The message has been sent! File {{file}} has been saved</div>{{/if}}
   {{#if isError}}
     <div class='isError'> Something is valid! </div>{{/if}}
   <label>Name: <input type='text' name='author' /></label>
   <label>Email: <input type='email' name='sender' /></label>
   <label>Title: <input type='text' name='title' /></label>
+  <label>Project design:
+    <input
+      type='file'
+      name='img'
+      accept='image/png, image/jpg, image/jpeg, image/gif'
+    /></label>
   <label>Message: <textarea name='message'></textarea></label>
   <button type='submit'>Send message</button>
 </form>
