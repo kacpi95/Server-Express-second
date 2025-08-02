@@ -1,8 +1,9 @@
 <h2>Contact</h2>
 <form method='POST' action='/contact/send-message'>
-
-  <div>{{#if isSent}} Your content{{/if}}</div>
-  <div>{{#if isError}} Something is valid! {{/if}}</div>
+  {{#if isSent}}
+    <div class='isSent'> Your content</div>{{/if}}
+  {{#if isError}}
+    <div class='isError'> Something is valid! </div>{{/if}}
   <label>Name: <input type='text' name='author' /></label>
   <label>Email: <input type='email' name='sender' /></label>
   <label>Title: <input type='text' name='title' /></label>
