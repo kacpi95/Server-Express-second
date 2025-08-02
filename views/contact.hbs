@@ -1,2 +1,8 @@
 <h2>Contact</h2>
-<p>Send me an email at programmer@example.com</p>
+<form method='POST' action='/contact/send-message'>
+  <label>Name: <input type='text' name='author' /></label>
+  <label>Email: <input type='email' name='sender' /></label>
+  <label>Title: <input type='name' name='title' /></label>
+  <label>Message: <textarea name='message'></textarea></label>
+  <button type='submit'>Send message</button>
+</form>
